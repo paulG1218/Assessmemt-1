@@ -90,14 +90,13 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
   const nums = []
-  for (let i = 0; i < n; i ++) {
-    nums.push(999999999)
+  for (let i = 0; i <= n; i ++) {
     for (let item of items) {
       if (item < nums[i]) {
         nums.splice(i, 1, item)
       }
     }
-    items.splice(nums.indexOf())
+    items.splice(nums.indexOf(nums[i]), 1))
   }
     return nums
 }
@@ -123,7 +122,7 @@ function findIndex(items, value) {
 //   => [1, 2, 3, 4, 5]
 function range(start, stop) {
   const numRange = []
-  for (let i = start; i < stop; i ++){
+  for (let i = start; i <= stop; i ++){
     numRange.push(i)
   }
 return numRange
