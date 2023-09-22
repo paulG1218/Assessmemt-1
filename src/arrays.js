@@ -58,7 +58,13 @@ function itemsWithLength(items, length) {
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) {}
+function everyOtherItem(items) {
+  const otherItems = []
+  for (let i = 0; i < items.length; i += 2) {
+    otherItems.push(items[i])
+  }
+  return otherItems
+}
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
