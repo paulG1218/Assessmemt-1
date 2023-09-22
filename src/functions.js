@@ -42,19 +42,42 @@ function fullName(firstName, lastName) {
 // Ex.:
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
-function generateSentence(person, beverage, location) {}
+function generateSentence(person, beverage, location) {
+  return `${person} was drinking ${beverage} at ${location}`
+}
 
 // Return the given string with all vowels replced with '*' characters.
 // Ex.:
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
-function censorVowels(string) {}
+function censorVowels(string) {
+for (let i = 0; i <= string.length; i ++) {
+  if (string.includes('a')) {
+    string = string.replace('a', '*')
+  } else if (string.includes('e')) {
+    string = string.replace('e', '*')
+  } else if (string.includes('i')) {
+    string = string.replace('i', '*')
+  } else if (string.includes('o')) {
+    string = string.replace('o', '*')
+  } else if (string.includes('u')) {
+    string = string.replace('u', '*')
+  }
+}
+return string
+}
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+function stickyCase(string) {
+  let letter
+  for (let i = 1; i <= string.length; i += 2) {
+    letter = string.charAt(i)
+    string = string.replace(letter, letter.toUppercase())
+  }  return string
+}
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
