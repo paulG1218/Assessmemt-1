@@ -72,7 +72,15 @@ function everyOtherItem(items) {
 // Ex.:
 //   findWordsStartingWith(['apple', 'banana', 'kiwi', 'pear', 'bacon'], 'b');
 //   => [1, 4]
-function findWordsStartingWith(words, letter) {}
+function findWordsStartingWith(words, letter) {
+  const wordIndex = []
+  for (let word of words) {
+    if (word.includes(letter, 0)) {
+      wordIndex.push(words.indexOf(word))
+    }
+  }
+  return wordIndex
+}
 
 // Return the `n` smallest values in the array in descending order (largest
 // numbers first). Assume that `n` will always be less than the length of the
