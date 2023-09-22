@@ -44,7 +44,15 @@ function extend(originalArray, additionalItems) {
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) {}
+function itemsWithLength(items, length) {
+  const newArray = []
+  for (let item of items) {
+    if (item.length === length) {
+      newArray.push(item)
+    }
+  }
+  return newArray
+}
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
