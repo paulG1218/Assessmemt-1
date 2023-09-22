@@ -90,15 +90,11 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
   const nums = []
-  for (let i = 0; i <= n; i ++) {
-    for (let item of items) {
-      if (item < nums[i]) {
-        nums.splice(i, 1, item)
-      }
-    }
-    items.splice(nums.indexOf(nums[i]), 1))
+  for (let i = 0; i < n; i ++) {
+    nums.push(Math.min(items))
+    items.splice(items.indexOf(nums[i]), 1)
   }
-    return nums
+  return nums
 }
 
 // Search for a value in the array and return its index. If the value appears
