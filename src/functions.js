@@ -75,7 +75,7 @@ function stickyCase(string) {
   let letter
   for (let i = 1; i <= string.length; i += 2) {
     letter = string.charAt(i)
-    string = string.replace(letter, letter.toUppercase())
+    string = string.replace(letter, letter.toUpperCase())
   }  return string
 }
 
