@@ -91,10 +91,10 @@ function findWordsStartingWith(words, letter) {
 function smallestNItems(items, n) {
   const nums = []
   for (let i = 0; i < n; i ++) {
-    nums.push(Math.min(items))
+    nums.push(Math.min(...items))
     items.splice(items.indexOf(nums[i]), 1)
   }
-  return nums
+  return nums.reverse()
 }
 
 // Search for a value in the array and return its index. If the value appears
